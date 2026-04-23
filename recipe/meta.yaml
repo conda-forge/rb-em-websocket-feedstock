@@ -1,5 +1,5 @@
 {% set name = "em-websocket" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.3" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: c39e6d64352eca13aedf4f5d7009666ab7f3ddce75410b883c467cf0e5465caf
+  sha256: f56a92bde4e6cb879256d58ee31f124181f68f8887bd14d53d5d9a292758c6a8
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
   skip: {{ win }}
